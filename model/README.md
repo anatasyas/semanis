@@ -4,7 +4,9 @@ API dibuat menggunakan FastAPI
 
 ## Membuat Docker Image dan menjalankannya
 `sudo docker build -t capstone-ml:1.0 . `
+
 `sudo docker container create --name ml-container --publish 8000:8000 capstone-ml`
+
 `sudo docker container start ml-container`
 
 model berjalan di port 8000 (bisa disesuaikan sesuai kebutuhan)
@@ -12,20 +14,25 @@ model berjalan di port 8000 (bisa disesuaikan sesuai kebutuhan)
 ## Format Request dan Response
 request API pada alamat berikut menggunakan metode **POST**
 `HOST:PORT/predict`
+
 request header wajib :
 `Content-Type: Application/json`
 
 request body berbentuk sebagai berikut
-<code>{
+<code>
+{
     "input":[// 12 float number]    
-}</code>
+}
+</code>
 
 masukan input berupa list berisikan 12 angka float, tidak kurang ataupun lebih. Selebihnya akan terjadi internal server error.
 
 jika tepat, server akan mengembalikan sebuah json sebagai berikut
-<code>{
+<code>
+{
     "result": // angka 1 atau 0
-}</code>
+}
+</code>
 
 angka 1 mengindikasikan gula darah terdeteksi tinggi dan angka 0 mengindikasikan gula darah terdeteksi tidak tinggi
 
