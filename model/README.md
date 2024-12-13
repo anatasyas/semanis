@@ -1,44 +1,28 @@
 # Machine Learning of the model
-> model >> Capstone_Project_Bangkit.ipynb
-API dibuat menggunakan FastAPI
+> model >> Capstone_Project_Regression_Semanis.ipynb
+Regresi Problem using Deep Neural Network Architecture
 
-## Membuat Docker Image dan menjalankannya
-`sudo docker build -t capstone-ml:1.0 . `
+Input               :
+- Gula Harian (Float)
+- Jenis Kelamin (laki-laki/perempuan)
+- riwayat diabetes (iya/tidak)
+- umur (int)
+- berat badan (int)
 
-`sudo docker container create --name ml-container --publish 8000:8000 capstone-ml`
+Target              : Maksimal Asupan Gula Harian (float) 
 
-`sudo docker container start ml-container`
+Model Architecture  :
+- 1 Input Layer (12 input neurons)
+- 1 Hidden Layer using ReLU activation with l2 regularizer (64 Neurons)
+- 1 Hidden Layer using ReLU activation (32 Neurons)
+- 1 Output layer using linear activation (1 output neuron)
 
-model berjalan di port 8000 (bisa disesuaikan sesuai kebutuhan)
+Loss Function       : Mean Squarred Error
 
-## Format Request dan Response
-request API pada alamat berikut menggunakan metode **POST**
-`HOST:PORT/predict`
+Optimizer Function  : Adam Optimizer (learning rate = 0.001)
 
-request header wajib :
-`Content-Type: Application/json`
-
-request body berbentuk sebagai berikut
-<code>
-{
-    "input":[// 12 float number]    
-}
-</code>
-
-masukan input berupa list berisikan 12 angka float, tidak kurang ataupun lebih. Selebihnya akan terjadi internal server error.
-
-jika tepat, server akan mengembalikan sebuah json sebagai berikut
-<code>
-{
-    "result": // angka 1 atau 0
-}
-</code>
-
-angka 1 mengindikasikan gula darah terdeteksi tinggi dan angka 0 mengindikasikan gula darah terdeteksi tidak tinggi
-
-### Contoh
-`curl -X POST -d '{"input":[-0.78065815,1.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0]}' -H 'Content-Type: Application/json' 127.0.0.1:8000/predict`
-
-akan menghasilkan
-
-`{"result":0}`
+Model's Metrics     :
+- loss: 0.0011
+- val_loss: 0.0012
+- mean_absolute_error: 0.0263
+- val_mean_absolute_error: 0.0268
