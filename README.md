@@ -6,14 +6,13 @@ SEMANIS is a mobile app designed to help users track and manage their daily suga
 
 ## 🌟 Features
 
-- **📊 Track Daily Sugar Intake**: Log your sugar consumption with ease.  
-- **📋 Personalized Recommendations**: Get daily sugar limits based on your profile.  
+- **📊 Track Daily Sugar Intake**: Log your sugar consumption with ease.   
 - **🔔 Alerts & Notifications**: Stay informed when limits are approached or exceeded.  
 - **🔒 Secure API Integration**: Your data is safe with FastAPI backend.  
 - **🤖 Smart Insights**: Machine learning analyzes patterns and predicts risks.  
 - **🚀 Step-by-Step Input Flow**:  
   1️⃣ Add your profile →  
-  2️⃣ Get daily recommendations →  
+  2️⃣ Get daily recommendation sugar limit for your personal goals→  
   3️⃣ Log sugar intake.  
 - **📈 Visualize Your Progress**: View trends with graphs and reports.  
 - **🌙 Dark Mode & Performance Boost**: Faster, smoother, and now with dark mode!  
