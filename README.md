@@ -1,38 +1,87 @@
-# **SEMANIS 🍭 - Daily Sugar Intake Tracker**
-
-SEMANIS is a mobile app designed to help users track and manage their daily sugar intake. With features tailored to Indonesia’s diabetes crisis, SEMANIS promotes healthier sugar habits through user-friendly tracking, personalized insights, and machine learning analysis. 🍬✨
+SEMANIS - Selalu Monitor Asupan Gula Sehat
+---
+## System Requirements
+- **Android Studio**: Arctic Fox or later.
+- **Android Version**: Minimum Android 6.0 (Marshmallow).
+- **Libraries**:
+- Retrofit
+- Room Database
+- TensorFlow Lite
+- Material Components
 
 ---
 
-## 🌟 Features
+## Installation and Configuration
 
-- **📊 Track Daily Sugar Intake**: Log your sugar consumption with ease.   
-- **🔔 Alerts & Notifications**: Stay informed when limits are approached or exceeded.  
-- **🔒 Secure API Integration**: Your data is safe with FastAPI backend.  
-- **🤖 Smart Insights**: Machine learning analyzes patterns and predicts risks.  
-- **🚀 Step-by-Step Input Flow**:  
-  1️⃣ Add your profile →  
-  2️⃣ Get daily recommendation sugar limit for your personal goals→  
-  3️⃣ Log sugar intake.  
-- **📈 Visualize Your Progress**: View trends with graphs and reports.  
-- **🌙 Dark Mode & Performance Boost**: Faster, smoother, and now with dark mode!  
+### 1. Clone Repository
+``` bash
+git clone https://github.com/simanis.git
+cd simanis
+```
 
----
+### 2. Open in Android Studio
+- Open Android Studio.
+- Select **File > Open** and navigate to the project folder.
 
-## 🔄 Recent Updates
+### 3. Add API Key
+- Create a `local.properties` file if it doesn't exist.
+- Add a line for API_KEY
 
-1. **Enhanced Input Flow**: Simplified and personalized process for better usability.  
-2. **Smarter ML Model**: Improved accuracy with loss: **0.0011**, validation loss: **0.0012**.  
-3. **Faster & Prettier UI**: Faster loading times and dark mode support. 🌑  
-4. **Inclusive Design**: Manual input ensures accessibility even in resource-limited areas. 🌍  
+### 4. Build and Run the App
+- Make sure your internet connection is active.
+- Click **Run** or use the shortcut `Shift + F10` to run the application on the emulator or physical device.
 
 ---
 
-## ✨ Coming Soon
+## User Guide
 
-- **🍽 Dietary Recommendations**: Get meal plans and healthier sugar alternatives.  
-- **📆 Long-Term Tracking**: Monitor your progress over time for lasting health improvements.  
+1. **Sugar Intake Recording**
+- Go to the main page and click the **Add Data** button.
+- Enter the amount of sugar consumed (grams) and save.
+
+2. **Monitor Daily Consumption**
+- View the graph on the dashboard to combine sugar consumption trends.
+- Notifications will appear if approaching the daily limit.
+
+3. **Analysis with Machine Learning**
+- Access the analysis feature to get recommendations for healthier sugar consumption patterns.
 
 ---
 
-SEMANIS empowers users to take control of their sugar intake for a healthier future. 🍭💪 Let’s fight diabetes together!
+## Project Structure
+```
+simanis/
+├── app/ # Main application folder
+├── data/ # Data model and database space
+├── network/ # API services using Retrofit
+├── ui/ # UI Components and Activities/Fragments
+├── util/ #Utilities such as themes and helper functions
+└── ml/ # Machine Learning Integration with TensorFlow Lite
+```
+
+---
+
+## Technologies Used
+- **Kotlin**: Main programming language.
+- **Retrofit**: For API integration.
+- **Database Room**: For local data storage.
+- **TensorFlow Lite**: For machine learning based data analysis.
+- **Material Design**: For modern UI/UX.
+
+---
+
+## Contributions
+We welcome contributions from anyone. Please follow these steps to contribute:
+
+1. Fork this repository.
+2. Create a new branch for the feature or fix.
+``` bash
+git checkout -b your-feature
+```
+3. Commit your changes.
+``` bash
+git commit -m "Description of changes"
+```
+4. Push to your repository and create a pull request.
+
+---
