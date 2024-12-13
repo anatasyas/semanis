@@ -1,4 +1,4 @@
-SEMANIS - Selalu Monitor Asupan Gula Sehat
+SIMANIS
 ---
 ## System Requirements
 - **Android Studio**: Arctic Fox or later.
