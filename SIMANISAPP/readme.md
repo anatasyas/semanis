@@ -1,4 +1,4 @@
-#SIMANIS
+SIMANIS
 ---
 ## System Requirements
 - **Android Studio**: Arctic Fox or later.
